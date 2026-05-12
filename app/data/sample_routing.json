@@ -1,0 +1,120 @@
+{
+  "brokerage": "Northstar Residential Group",
+  "market": "Greater Boston",
+  "agents": [
+    {
+      "agent_id": "agt-101",
+      "name": "Emma Rivera",
+      "zones": ["Cambridge", "Somerville", "Medford"],
+      "property_types": ["condo", "single-family"],
+      "min_price": 500000,
+      "max_price": 1800000,
+      "response_sla_minutes": 7,
+      "active_leads": 18,
+      "luxury_certified": false,
+      "languages": ["English", "Spanish"],
+      "conversion_rate": 0.19
+    },
+    {
+      "agent_id": "agt-102",
+      "name": "Marcus Lee",
+      "zones": ["Boston", "Cambridge", "Brookline"],
+      "property_types": ["condo", "multi-family"],
+      "min_price": 700000,
+      "max_price": 2600000,
+      "response_sla_minutes": 5,
+      "active_leads": 14,
+      "luxury_certified": true,
+      "languages": ["English", "Korean"],
+      "conversion_rate": 0.23
+    },
+    {
+      "agent_id": "agt-103",
+      "name": "Priya Nair",
+      "zones": ["Newton", "Brookline", "Boston"],
+      "property_types": ["single-family", "townhome"],
+      "min_price": 900000,
+      "max_price": 3200000,
+      "response_sla_minutes": 9,
+      "active_leads": 11,
+      "luxury_certified": true,
+      "languages": ["English", "Hindi"],
+      "conversion_rate": 0.26
+    },
+    {
+      "agent_id": "agt-104",
+      "name": "Daniel Ortiz",
+      "zones": ["Quincy", "Boston", "Dorchester"],
+      "property_types": ["condo", "single-family", "multi-family"],
+      "min_price": 400000,
+      "max_price": 1400000,
+      "response_sla_minutes": 11,
+      "active_leads": 9,
+      "luxury_certified": false,
+      "languages": ["English", "Portuguese"],
+      "conversion_rate": 0.17
+    }
+  ],
+  "leads": [
+    {
+      "lead_id": "lead-9001",
+      "name": "Alyssa Hart",
+      "zone": "Cambridge",
+      "property_type": "condo",
+      "budget": 1150000,
+      "timeline_days": 14,
+      "channel": "zillow",
+      "intent_score": 86,
+      "preferred_language": "English",
+      "luxury_expectation": false
+    },
+    {
+      "lead_id": "lead-9002",
+      "name": "Jae Min Park",
+      "zone": "Boston",
+      "property_type": "multi-family",
+      "budget": 2100000,
+      "timeline_days": 7,
+      "channel": "google-ads",
+      "intent_score": 91,
+      "preferred_language": "Korean",
+      "luxury_expectation": true
+    },
+    {
+      "lead_id": "lead-9003",
+      "name": "Miguel Santos",
+      "zone": "Quincy",
+      "property_type": "single-family",
+      "budget": 760000,
+      "timeline_days": 21,
+      "channel": "referral",
+      "intent_score": 79,
+      "preferred_language": "Portuguese",
+      "luxury_expectation": false
+    },
+    {
+      "lead_id": "lead-9004",
+      "name": "Neha Kapoor",
+      "zone": "Newton",
+      "property_type": "single-family",
+      "budget": 2850000,
+      "timeline_days": 10,
+      "channel": "website",
+      "intent_score": 88,
+      "preferred_language": "Hindi",
+      "luxury_expectation": true
+    },
+    {
+      "lead_id": "lead-9005",
+      "name": "Rachel Kim",
+      "zone": "Somerville",
+      "property_type": "condo",
+      "budget": 980000,
+      "timeline_days": 30,
+      "channel": "open-house",
+      "intent_score": 72,
+      "preferred_language": "English",
+      "luxury_expectation": false
+    }
+  ]
+}

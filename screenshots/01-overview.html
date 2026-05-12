@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lead Routing Command Center</title>
+  <style>
+    :root {
+      --bg: #09111d;
+      --panel: #101d2f;
+      --panel-2: #17263c;
+      --line: #29486f;
+      --ink: #f3ecde;
+      --muted: #b5c2d7;
+      --blue: #6db2ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(54, 103, 164, 0.18), transparent 30%),
+        linear-gradient(180deg, #08111c 0%, #0b1522 100%);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+    .frame {
+      width: 1440px;
+      min-height: 920px;
+      margin: 0 auto;
+      padding: 48px;
+    }
+    .shell {
+      background: rgba(13, 24, 39, 0.94);
+      border: 1px solid var(--line);
+      border-radius: 36px;
+      padding: 34px 36px 36px;
+    }
+    .eyebrow {
+      margin: 0 0 22px;
+      font: 700 13px/1.2 "Segoe UI", sans-serif;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    h1 {
+      margin: 0;
+      font-size: 70px;
+      line-height: 1.02;
+      max-width: 1180px;
+      letter-spacing: -0.05em;
+    }
+    p.lead {
+      margin: 24px 0 0;
+      max-width: 1060px;
+      color: var(--muted);
+      font: 400 19px/1.55 "Segoe UI", sans-serif;
+    }
+    .pills {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 22px 0 26px;
+    }
+    .pill {
+      background: #1d2d45;
+      border: 1px solid #335a8d;
+      color: #f5f7fb;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font: 700 15px/1 "Segoe UI", sans-serif;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin: 8px 0 34px;
+    }
+    .card {
+      background: var(--panel-2);
+      border: 1px solid #335885;
+      border-radius: 24px;
+      padding: 22px 22px 18px;
+      min-height: 170px;
+    }
+    .card h2 {
+      margin: 0 0 12px;
+      color: #a8cbff;
+      font: 700 12px/1.2 "Segoe UI", sans-serif;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+    .metric {
+      font-size: 58px;
+      line-height: 1;
+      margin: 0 0 10px;
+    }
+    .card p, .card li, .table, .lane {
+      color: var(--muted);
+      font: 400 18px/1.45 "Segoe UI", sans-serif;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.25fr 0.85fr;
+      gap: 18px;
+    }
+    .table {
+      display: grid;
+      gap: 12px;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 1.15fr 0.9fr 0.8fr 0.9fr;
+      gap: 14px;
+      align-items: center;
+      padding: 16px 18px;
+      background: #0c1728;
+      border: 1px solid #223c5d;
+      border-radius: 18px;
+    }
+    .row strong {
+      color: var(--ink);
+      display: block;
+      font: 700 24px/1.1 Georgia, serif;
+    }
+    .small {
+      font-size: 15px;
+      color: #87a2c7;
+    }
+    .lane {
+      padding: 16px 18px;
+      background: #0c1728;
+      border: 1px solid #223c5d;
+      border-radius: 18px;
+      margin-bottom: 12px;
+    }
+    .lane strong {
+      display: block;
+      color: var(--ink);
+      font: 700 24px/1.15 Georgia, serif;
+      margin-bottom: 6px;
+    }
+    pre {
+      margin: 0;
+      color: #d7e8ff;
+      font: 16px/1.5 Consolas, monospace;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="shell">
+      <p class="eyebrow">Lead Routing Command Center</p>
+      
+      <h1>Route every lead to the right agent before high intent drifts into silence or overlap.</h1>
+      <p class="lead">
+        Lead Routing Command Center scores geography, property fit, budget alignment, language, responsiveness, and agent load
+        so brokerages can assign inbound demand with much more precision than a round-robin queue.
+      </p>
+      <div class="pills">
+        <div class="pill">geo + budget routing</div>
+        <div class="pill">agent workload balancing</div>
+        <div class="pill">luxury and language matching</div>
+        <div class="pill">same-hour follow-up priority</div>
+      </div>
+      <div class="stats">
+        <div class="card"><h2>leads queued</h2><div class="metric">5</div><p>Inbound opportunities ranked for immediate routing.</p></div>
+        <div class="card"><h2>avg. urgency</h2><div class="metric">69.8</div><p>Composite of intent and timeline pressure.</p></div>
+        <div class="card"><h2>same-hour follow-up</h2><div class="metric">2</div><p>Assignments strong enough to trigger immediate action.</p></div>
+        <div class="card"><h2>luxury leads</h2><div class="metric">2</div><p>Protect the fast-response luxury lanes, then keep Quincy and Cambridge leads on dedicated agents so high-intent buyers do not drift while the team load shifts.</p></div>
+      </div>
+      <div class="grid-2">
+        <div class="card"><h2>route queue</h2><div class="table">
+        <div class="row">
+          <div>
+            <strong>Jae Min Park</strong>
+            <div class="small">Boston · multi-family</div>
+          </div>
+          <div>Marcus Lee</div>
+          <div>87</div>
+          <div>86</div>
+        </div>
+        
+        <div class="row">
+          <div>
+            <strong>Neha Kapoor</strong>
+            <div class="small">Newton · single-family</div>
+          </div>
+          <div>Priya Nair</div>
+          <div>87</div>
+          <div>81</div>
+        </div>
+        
+        <div class="row">
+          <div>
+            <strong>Alyssa Hart</strong>
+            <div class="small">Cambridge · condo</div>
+          </div>
+          <div>Marcus Lee</div>
+          <div>75</div>
+          <div>75</div>
+        </div>
+        </div></div>
+        <div class="card"><h2>lead recommendation</h2><p>Protect the fast-response luxury lanes, then keep Quincy and Cambridge leads on dedicated agents so high-intent buyers do not drift while the team load shifts.</p></div>
+      </div>
+    
+    </div>
+  </div>
+</body>
+</html>
