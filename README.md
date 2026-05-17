@@ -26,7 +26,7 @@ Lead Routing Command Center is a brokerage routing engine for matching inbound r
 ## Local run
 
 ```powershell
-Set-Location "C:\Users\chaus\dev\repos\lead-routing-command-center"
+cd lead-routing-command-center
 py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe -m app.main
