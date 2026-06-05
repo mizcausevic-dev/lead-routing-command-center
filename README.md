@@ -2,6 +2,9 @@
 
 Lead Routing Command Center is a brokerage routing engine for matching inbound real estate leads to the right agent based on geography, property type, budget, responsiveness, workload, language fit, and luxury readiness.
 
+- Live: `https://mizcausevic-dev.github.io/lead-routing-command-center/`
+- Repo: `https://github.com/mizcausevic-dev/lead-routing-command-center`
+
 ![Overview](./screenshots/01-overview.png)
 
 ## Why this repo is good
@@ -37,6 +40,7 @@ Open:
 - `http://127.0.0.1:4762/`
 - `http://127.0.0.1:4762/matchboard`
 - `http://127.0.0.1:4762/agent-loads`
+- `http://127.0.0.1:4762/api-summary`
 - `http://127.0.0.1:4762/docs`
 
 ## Validation
@@ -45,6 +49,7 @@ Open:
 .\.venv\Scripts\python.exe -m unittest discover -s tests
 .\.venv\Scripts\python.exe scripts\run_demo.py
 .\.venv\Scripts\python.exe scripts\smoke_check.py
+.\.venv\Scripts\python.exe scripts\prerender_site.py
 .\.venv\Scripts\python.exe scripts\render_readme_assets.py
 ```
 

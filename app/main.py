@@ -5,12 +5,12 @@ import json
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse, JSONResponse
 
-from app.render import render_agent_loads, render_api_summary, render_matchboard, render_overview
+from app.render import render_agent_loads, render_api_summary, render_docs, render_matchboard, render_overview
 from app.services.routing_service import build_service
 
 app = FastAPI(
     title="Lead Routing Command Center",
-    version="0.1.0",
+    version="1.1.0",
     description=(
         "Real estate lead routing engine for brokerages, agent matching, workload balancing, and follow-up prioritization."
     ),
@@ -37,6 +37,11 @@ def agent_loads() -> str:
 @app.get("/api-summary", response_class=HTMLResponse)
 def api_summary_page() -> str:
     return render_api_summary()
+
+
+@app.get("/docs", response_class=HTMLResponse)
+def docs_page() -> str:
+    return render_docs()
 
 
 @app.get("/api/dashboard/summary")

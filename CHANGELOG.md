@@ -2,16 +2,24 @@
 
 All notable changes to this project are documented here.
 
+## [1.1.0] - 2026-06-05
+
+### Released
+- Added `/docs` to match the documented route surface.
+- Added static GitHub Pages publishing without consuming a new Kinetic Gain subdomain.
+- Added `scripts/prerender_site.py` for HTML, JSON, robots, and sitemap output.
+- Refreshed README live URL and validation steps.
+
 ## [1.0.0] - 2026-05-12
 
 ### Released
-- Shipped **lead-routing-command-center** as a public artifact for teams dealing with ai retrieval reliability.
+- Shipped **lead-routing-command-center** as a public artifact for teams dealing with brokerage lead assignment, follow-up latency, and agent-capacity routing.
 - Packaged the current implementation, documentation, validation flow, and proof surfaces into a repo that can be reviewed by technical and operating stakeholders.
-- Clarified the core problem the project is addressing: retrieval drift, citation breakdowns, and rising hallucination risk as corpora and prompts evolve.
+- Clarified the core problem the project is addressing: high-intent real estate leads lose value when assignment logic is opaque, overloaded, or too slow.
 
 ### Why this mattered
-- Existing approaches in vector tooling, LLM observability stacks, and evaluation suites were useful for parts of the workflow.
-- They still left out a durable operator workflow for evidence quality, source freshness, and trust decisions.
+- Existing CRM routing rules and round-robin assignments were useful for parts of the workflow.
+- They still left out a durable operator workflow for fit scoring, backup ownership, workload pressure, and follow-up priority.
 - This release made the repo read like an operational capability rather than a narrow technical demo.
 
 ## [0.1.0] - 2026-03-17
@@ -25,20 +33,20 @@ All notable changes to this project are documented here.
 
 ### Built
 - Built the first runnable prototype for the repo's main workflow and decision model.
-- Validated the concept against pressure points such as RAG hallucination rates, stale retrieval context, and citation-quality breakdowns.
+- Validated the concept against pressure points such as overloaded top agents, weak backup routing, and lead urgency decay.
 - Used the prototype phase to test whether the project could drive action, not just present information.
 
 ## [Design Phase] - 2024-02-11
 
 ### Designed
 - Defined the system around operator-first and decision-legible outputs.
-- Chose interfaces and examples that made sense for AI platform, search, and knowledge-system teams.
+- Chose interfaces and examples that made sense for brokerage operators, RevOps owners, and agent team leads.
 - Avoided reducing the project to a generic dashboard, CRUD app, or fashionable wrapper around the stack.
 
 ## [Idea Origin] - 2023-03-11
 
 ### Observed
-- The original idea surfaced while looking at how teams were handling retrieval drift, citation breakdowns, and rising hallucination risk as corpora and prompts evolve.
+- The original idea surfaced while looking at how teams were handling lead ownership, speed-to-lead pressure, and routing conflicts across high-intent demand.
 - The recurring pattern was that teams had data and tools, but still lacked a usable operating layer for the hardest decisions.
 
 ## [Background Signals] - 2022-08-09

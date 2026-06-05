@@ -277,6 +277,29 @@ def render_api_summary() -> str:
     return page_shell("API Summary", "API Summary", body)
 
 
+def render_docs() -> str:
+    body = """
+      <h1>Lead routing should be explainable, reversible, and visible before handoff quality breaks.</h1>
+      <p class="lead">
+        This command center models the routing layer between lead capture and CRM ownership. It keeps lead fit,
+        agent capacity, route rationale, and backup ownership together so RevOps and brokerage teams can see why
+        an assignment happened before follow-up latency turns into lost demand.
+      </p>
+      <div class="grid-2">
+        <div class="card">
+          <h2>operator contract</h2>
+          <p>Every routed lead includes a primary owner, backup owner, urgency score, match score, and route recommendation.</p>
+          <p>The goal is not automated reassignment theater. The goal is a board-readable operating surface that shows whether demand is reaching the right human quickly enough.</p>
+        </div>
+        <div class="card">
+          <h2>routes</h2>
+          <pre>/\n/matchboard\n/agent-loads\n/api-summary\n/docs\n/api/dashboard/summary\n/api/leads\n/api/agents\n/api/sample</pre>
+        </div>
+      </div>
+    """
+    return page_shell("Docs", "Operator Docs", body)
+
+
 def write_static_proof_pages(output_dir: Path) -> list[Path]:
     output_dir.mkdir(parents=True, exist_ok=True)
     pages = {
@@ -284,6 +307,7 @@ def write_static_proof_pages(output_dir: Path) -> list[Path]:
         "02-matchboard.html": render_matchboard(),
         "03-agent-loads.html": render_agent_loads(),
         "04-api-summary.html": render_api_summary(),
+        "05-docs.html": render_docs(),
     }
     written: list[Path] = []
     for name, contents in pages.items():
