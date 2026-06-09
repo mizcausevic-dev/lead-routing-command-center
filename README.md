@@ -20,6 +20,14 @@ Lead Routing Command Center is a brokerage routing engine for matching inbound r
 - Highlights same-hour follow-up lanes for high-intent demand.
 - Exposes a clean API plus operator-friendly proof surfaces.
 
+## What this product does
+
+Lead Routing Command Center turns inbound real estate demand into an explainable routing layer: who should own the lead, why they are the best fit, who is the backup, and whether the follow-up SLA is already at risk.
+
+For a SaaS go-to-market analyst, the product exposes where brokerage growth breaks down: high-intent buyers sitting in generic queues, agents fighting over unclear ownership, and luxury or language-fit leads drifting before anyone can prove who should act. For a SaaS value architect, the value is cleaner conversion motion, lower agent conflict, fewer missed high-value opportunities, and a reusable handoff contract that can connect CRM, ads, concierge, and sales-performance reporting.
+
+Technically, this repo ships a FastAPI service, deterministic ranking logic, JSON endpoints, prerendered public pages, demo fixtures, smoke checks, and screenshot assets. It shares the broader Kinetic Gain pattern: convert operational ambiguity into named lanes, owner-visible evidence, and board-readable next actions.
+
 ## Proof
 
 ![Matchboard](./screenshots/02-matchboard.png)

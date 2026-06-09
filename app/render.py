@@ -109,10 +109,23 @@ def page_shell(title: str, eyebrow: str, body: str) -> str:
       color: var(--muted);
       font: 400 18px/1.45 "Segoe UI", sans-serif;
     }}
+    .section-title {{
+      margin: 34px 0 16px;
+      color: #a8cbff;
+      font: 700 13px/1.2 "Segoe UI", sans-serif;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }}
     .grid-2 {{
       display: grid;
       grid-template-columns: 1.25fr 0.85fr;
       gap: 18px;
+    }}
+    .depth-grid {{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 18px 0 30px;
     }}
     .table {{
       display: grid;
@@ -156,6 +169,27 @@ def page_shell(title: str, eyebrow: str, body: str) -> str:
       font: 16px/1.5 Consolas, monospace;
       white-space: pre-wrap;
     }}
+    @media (max-width: 900px) {{
+      .frame {{
+        width: auto;
+        padding: 20px;
+      }}
+      .shell {{
+        border-radius: 24px;
+        padding: 24px;
+      }}
+      h1 {{
+        font-size: clamp(42px, 12vw, 70px);
+      }}
+      .stats,
+      .grid-2,
+      .depth-grid {{
+        grid-template-columns: 1fr;
+      }}
+      .row {{
+        grid-template-columns: 1fr;
+      }}
+    }}
   </style>
 </head>
 <body>
@@ -167,6 +201,37 @@ def page_shell(title: str, eyebrow: str, body: str) -> str:
   </div>
 </body>
 </html>"""
+
+
+def render_product_depth() -> str:
+    cards = [
+        (
+            "What this product does",
+            "Turns inbound real estate demand into an explainable routing layer: who should own the lead, why they are the best fit, who is the backup, and whether the follow-up SLA is already at risk.",
+        ),
+        (
+            "SaaS go-to-market analyst lens",
+            "Brokerage growth fails when high-intent leads sit in generic queues. This surface makes lead quality, territory fit, agent capacity, and same-hour response pressure visible before conversion loss becomes a vague marketing complaint.",
+        ),
+        (
+            "SaaS value architect lens",
+            "The value is cleaner conversion motion, lower agent conflict, fewer missed luxury opportunities, and a reusable handoff contract that can plug into CRM, ads, concierge, and sales-performance reporting.",
+        ),
+        (
+            "Technical proof",
+            "The repo ships a FastAPI service, deterministic ranking logic, JSON endpoints, prerendered public pages, smoke checks, demo fixtures, and screenshot assets that expose the route decision instead of hiding it behind a generic dashboard.",
+        ),
+        (
+            "What these repos have in common",
+            "Like the broader Kinetic Gain estate, this repo converts an operational ambiguity into named lanes, owner-visible evidence, and board-readable next actions. Here the ambiguity is lead ownership and response risk.",
+        ),
+    ]
+    return f"""
+      <div class="section-title">Product depth</div>
+      <div class="depth-grid">
+        {"".join(f'<div class="card"><h2>{html.escape(title)}</h2><p>{html.escape(copy)}</p></div>' for title, copy in cards)}
+      </div>
+    """
 
 
 def render_overview() -> str:
@@ -204,6 +269,7 @@ def render_overview() -> str:
         <div class="card"><h2>same-hour follow-up</h2><div class="metric">{summary['sameHourFollowupCount']}</div><p>Assignments strong enough to trigger immediate action.</p></div>
         <div class="card"><h2>luxury leads</h2><div class="metric">{summary['luxuryLeadCount']}</div><p>{html.escape(summary['leadRecommendation'])}</p></div>
       </div>
+      {render_product_depth()}
       <div class="grid-2">
         <div class="card"><h2>route queue</h2><div class="table">{rows}</div></div>
         <div class="card"><h2>lead recommendation</h2><p>{html.escape(summary['leadRecommendation'])}</p></div>
@@ -285,6 +351,7 @@ def render_docs() -> str:
         agent capacity, route rationale, and backup ownership together so RevOps and brokerage teams can see why
         an assignment happened before follow-up latency turns into lost demand.
       </p>
+      {render_product_depth()}
       <div class="grid-2">
         <div class="card">
           <h2>operator contract</h2>

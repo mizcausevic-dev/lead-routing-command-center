@@ -98,10 +98,23 @@
       color: var(--muted);
       font: 400 18px/1.45 "Segoe UI", sans-serif;
     }
+    .section-title {
+      margin: 34px 0 16px;
+      color: #a8cbff;
+      font: 700 13px/1.2 "Segoe UI", sans-serif;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
     .grid-2 {
       display: grid;
       grid-template-columns: 1.25fr 0.85fr;
       gap: 18px;
+    }
+    .depth-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 18px 0 30px;
     }
     .table {
       display: grid;
@@ -145,6 +158,27 @@
       font: 16px/1.5 Consolas, monospace;
       white-space: pre-wrap;
     }
+    @media (max-width: 900px) {
+      .frame {
+        width: auto;
+        padding: 20px;
+      }
+      .shell {
+        border-radius: 24px;
+        padding: 24px;
+      }
+      h1 {
+        font-size: clamp(42px, 12vw, 70px);
+      }
+      .stats,
+      .grid-2,
+      .depth-grid {
+        grid-template-columns: 1fr;
+      }
+      .row {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -169,6 +203,12 @@
         <div class="card"><h2>same-hour follow-up</h2><div class="metric">2</div><p>Assignments strong enough to trigger immediate action.</p></div>
         <div class="card"><h2>luxury leads</h2><div class="metric">2</div><p>Protect the fast-response luxury lanes, then keep Quincy and Cambridge leads on dedicated agents so high-intent buyers do not drift while the team load shifts.</p></div>
       </div>
+      
+      <div class="section-title">Product depth</div>
+      <div class="depth-grid">
+        <div class="card"><h2>What this product does</h2><p>Turns inbound real estate demand into an explainable routing layer: who should own the lead, why they are the best fit, who is the backup, and whether the follow-up SLA is already at risk.</p></div><div class="card"><h2>SaaS go-to-market analyst lens</h2><p>Brokerage growth fails when high-intent leads sit in generic queues. This surface makes lead quality, territory fit, agent capacity, and same-hour response pressure visible before conversion loss becomes a vague marketing complaint.</p></div><div class="card"><h2>SaaS value architect lens</h2><p>The value is cleaner conversion motion, lower agent conflict, fewer missed luxury opportunities, and a reusable handoff contract that can plug into CRM, ads, concierge, and sales-performance reporting.</p></div><div class="card"><h2>Technical proof</h2><p>The repo ships a FastAPI service, deterministic ranking logic, JSON endpoints, prerendered public pages, smoke checks, demo fixtures, and screenshot assets that expose the route decision instead of hiding it behind a generic dashboard.</p></div><div class="card"><h2>What these repos have in common</h2><p>Like the broader Kinetic Gain estate, this repo converts an operational ambiguity into named lanes, owner-visible evidence, and board-readable next actions. Here the ambiguity is lead ownership and response risk.</p></div>
+      </div>
+    
       <div class="grid-2">
         <div class="card"><h2>route queue</h2><div class="table">
         <div class="row">

@@ -98,10 +98,23 @@
       color: var(--muted);
       font: 400 18px/1.45 "Segoe UI", sans-serif;
     }
+    .section-title {
+      margin: 34px 0 16px;
+      color: #a8cbff;
+      font: 700 13px/1.2 "Segoe UI", sans-serif;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
     .grid-2 {
       display: grid;
       grid-template-columns: 1.25fr 0.85fr;
       gap: 18px;
+    }
+    .depth-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 18px 0 30px;
     }
     .table {
       display: grid;
@@ -145,6 +158,27 @@
       font: 16px/1.5 Consolas, monospace;
       white-space: pre-wrap;
     }
+    @media (max-width: 900px) {
+      .frame {
+        width: auto;
+        padding: 20px;
+      }
+      .shell {
+        border-radius: 24px;
+        padding: 24px;
+      }
+      h1 {
+        font-size: clamp(42px, 12vw, 70px);
+      }
+      .stats,
+      .grid-2,
+      .depth-grid {
+        grid-template-columns: 1fr;
+      }
+      .row {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -158,6 +192,7 @@
         agent capacity, route rationale, and backup ownership together so RevOps and brokerage teams can see why
         an assignment happened before follow-up latency turns into lost demand.
       </p>
+      {render_product_depth()}
       <div class="grid-2">
         <div class="card">
           <h2>operator contract</h2>
